@@ -64,10 +64,7 @@ codyssey_EP-3/
 
 ```bash
 git clone https://github.com/thdus-cmyk/codyssey_EP-3
-```
-
-### 프로그램 실행
-```bash
+cd codyssey_EP-3
 python main.py
 ```
 
