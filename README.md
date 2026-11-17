@@ -61,6 +61,12 @@ codyssey_EP-3/
 ## 3. 실행 방법 및 주요 기능
 
 ### 3.1 실행 명령어
+
+```bash
+git clone https://github.com/thdus-cmyk/codyssey_EP-3
+```
+
+### 프로그램 실행
 ```bash
 python main.py
 ```
