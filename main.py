@@ -93,7 +93,12 @@ def read_matrix(name, size=3):
     matrix = []
     while len(matrix) < size:
         try:
-            row = [float(item) for item in input("{}행: ".format(len(matrix) + 1)).split()]
+            line = input("{}행: ".format(len(matrix) + 1))
+            if not line.strip():
+                print("행 수 오류: {}행 중 {}행을 입력했습니다. {}행을 입력하세요.".format(
+                    size, len(matrix), len(matrix) + 1))
+                continue
+            row = [float(item) for item in line.split()]
             if len(row) != size or not all(math.isfinite(x) for x in row):
                 raise ValueError()
         except ValueError:
@@ -107,8 +112,14 @@ def manual_mode(repeats=100):
     a = read_matrix("필터 A")
     b = read_matrix("필터 B")
     print("필터 A, B 저장 완료")
-    pattern = read_matrix("패턴")
-    score_a, score_b = mac(pattern, a), mac(pattern, b)
+    while True:
+        pattern = read_matrix("패턴")
+        try:
+            score_a, score_b = mac(pattern, a), mac(pattern, b)
+        except ValueError as exc:
+            print("{}: 패턴을 다시 입력하세요.".format(exc))
+            continue
+        break
     print("\nA 점수: {:.17g}\nB 점수: {:.17g}".format(score_a, score_b))
     verdict = decide(score_a, score_b, ("A", "B"))
     print("판정: {}".format("UNDECIDED (판정 불가)" if verdict == "UNDECIDED" else verdict))
