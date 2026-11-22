@@ -41,7 +41,7 @@
 | :--- | :--- |
 | **Language** | Python 3.8+ (외부 라이브러리 미사용, Pure Python) |
 | **IDE / Environment** | Visual Studio Code / Terminal
-| **VCS** | Git / GitHub (`thdus-cmyk/codyssey_EP-3`) |
+| **VCS** | Git / GitHub (`k'_mission3`) |
 
 ### 2.2 프로젝트 모듈 구조
 
@@ -69,14 +69,14 @@ codyssey_EP-3/
 ### 3.1 실행 명령어
 
 ```bash
-git clone [https://github.com/duly-208129/mission3]
-cd codyssey_EP-3
+git clone https://github.com/duly-208129/mission3
+cd k'_mission3
 python main.py
 ```
 
 > **💡 초보자 안내 — 명령어 한 줄씩 이해하기**  
 > * `git clone ...`: GitHub에 올라온 프로젝트 코드를 내 컴퓨터로 내려받는 명령어입니다[cite: 8].  
-> * `cd codyssey_EP-3`: 내려받은 프로젝트 폴더 안으로 이동하는 명령어입니다[cite: 8].  
+> * `cd k'_mission3`: 내려받은 프로젝트 폴더 안으로 이동하는 명령어입니다[cite: 8].  
 > * `python main.py`: 프로젝트의 시작 파일인 `main.py`를 실행하는 명령어입니다[cite: 1, 8]. (환경에 따라 `python3 main.py`로 입력해야 할 수도 있습니다.)
 
 ### 3.2 제공 기능 및 실행 증빙 스크린샷
